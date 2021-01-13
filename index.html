@@ -1,0 +1,22 @@
+<script src='https://content.jwplatform.com/libraries/IDzF9Zmk.js'></script> 
+</head>
+<div id='myElement'>Loading the player . . .</div>
+<script type='text/javascript'>
+jwplayer("myElement").setup({
+sources: [{
+      file: 'https://amssamples.streaming.mediaservices.windows.net/622b189f-ec39-43f2-93a2-201ac4e31ce1/BigBuckBunny.ism/manifest(format=mpd-time-csf)',
+      drm: {
+        widevine: {
+          url: 'https://amssamples.keydelivery.mediaservices.windows.net/Widevine/?KID=1ab45440-532c-4399-94dc-5c5ad9584bac',
+              }
+      }
+          }]
+});
+</script>
+Afterwards, you can programmatically call API methods on JW Player, which works seamlessly with the event triggers on, off, once, and trigger. See this example:
+
+<script>
+jwplayer("myElement").on('complete', function(){
+     alert("Playing is complete.");
+});
+</script> </html>
